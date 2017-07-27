@@ -29,11 +29,13 @@
 <a href="FrontController?todo=ResponseHeaders">Response Headers</a> !
 <a href="FrontController?todo=ResponseMethods">Some other Response Methods</a> !
 
-<a href="FrontController?todo=Session Attributes&myAction=myRequestParameter">Session Attributes</a> !
+<a href="FrontController?todo=SessionAttributes&myAction=myRequestParameter">Session Attributes</a> !
 <a href="FrontController?todo=SessionMethods">Some other Session Methods</a> !
 
 <a href="FrontController?todo=ContextParameters">Context Parameters</a> !
 <a href="FrontController?todo=ContextAttributes">Context Attributes</a> !
-<a href="FrontController?todo=Context Methods">Some other Context Methods</a><br>
+<a href="FrontController?todo=ContextMethods">Some other Context Methods</a><br><br>
+<a href="view.jsp">View</a>
+
 
 

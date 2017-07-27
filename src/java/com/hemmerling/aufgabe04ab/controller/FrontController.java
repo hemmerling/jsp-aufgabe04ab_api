@@ -7,11 +7,15 @@ package com.hemmerling.aufgabe04ab.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Map;
+import java.util.Properties;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -20,6 +24,32 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "FrontController", urlPatterns = {"/FrontController"})
 public class FrontController extends HttpServlet {
 
+    private static final String ACTION = "todo";
+
+    private static final String REQUESTPARAMETERS = "RequestParameters";
+    private static final String REQUESTHEADERS = "RequestHeaders";
+    private static final String REQUESTATTRIBUTES = "RequestAttributes";
+    private static final String REQUESTMETHODS = "RequestMethods";
+
+    private static final String RESPONSEHEADERS = "ResponseHeaders";
+    private static final String RESPONSEMETHODS = "ResponseMethods";
+
+    private static final String SESSIONATTRIBUTES = "SessionAttributes";
+    private static final String SESSIONMETHODS = "SessionMethods";
+
+    private static final String CONTEXPARAMETERS = "ContextParameters";
+    private static final String CONTEXATTRIBUTES = "ContextAttributes";
+    private static final String CONTEXMETHODS = "ContextMethods";
+
+    private static final String VIEWPAGE = "view.jsp";
+    private static final String TOPIC = "topic";
+
+    private static Properties actionMap = new Properties();
+
+//    interface Action {
+//    public abstract void execute(HttpServletRequest request, HttpServletResponse response)
+//                         throws ServletException, IOException;
+//    }
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -32,20 +62,31 @@ public class FrontController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet FrontController</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet FrontController at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
-    }
+        HttpSession session = request.getSession();
+        Object obj = session.getAttribute(TOPIC);
 
+        String todo = request.getParameter(ACTION);
+//        if (todo != null && !todo.trim().isEmpty()) {
+//            String className = actionMap.getProperty(todo);
+//            Action action = (Action) Class.forName(className).newInstance();
+//            action.execute(request, response);
+//        }
+        if (todo != null && !todo.trim().isEmpty()) {
+            switch (todo) {
+                case REQUESTPARAMETERS: {
+                    Map<String, String[]> map;
+                    map = (Map<String, String[]>) request.getParameterMap();
+                    Topic topic = new Topic(REQUESTPARAMETERS, "Key", "Value", map);
+                    session.setAttribute(TOPIC, topic);
+                    break;
+                }
+            }
+
+        }
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher(VIEWPAGE);
+        requestDispatcher.forward(request, response);
+    }
+   
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
