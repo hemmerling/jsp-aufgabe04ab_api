@@ -21,7 +21,6 @@
     <body>
        <jsp:include page = "header.jsp"/>
        <h1>Session Attributes</h1>
-        <% int myAttribute = 1; %>
         <table style="width:100%" border="1">
             <tr>
                 <th>Attribute Name</th>

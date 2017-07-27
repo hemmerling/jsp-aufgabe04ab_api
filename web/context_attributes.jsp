@@ -4,6 +4,7 @@
     Author     : rhemmerling
 --%>
 
+<%@page import="java.util.Enumeration"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,5 +15,45 @@
     <body>
        <jsp:include page = "header.jsp"/>
        <h1>Context Attributes</h1>
+        <table style="width:100%" border="1">
+            <tr>
+                <th>Attribute Name</th>
+                <th>Attribute Contents</th>
+            </tr>
+            <% ServletContext context2 = request.getServletContext();
+               Enumeration enum2;
+               enum2 = context2.getAttributeNames();
+               while (enum2.hasMoreElements()) {
+                    String name = enum2.nextElement().toString();
+            %>
+            <tr>
+                <td>
+                    <%= name %>
+                </td>
+                <td>
+                    <%= context2.getAttribute(name) %>
+                </td>
+            </tr>
+            <% }%>
+         </table>
+ 
+        <h1>Context Attribute Names</h1>
+        <table style="width:100%" border="1">
+            <tr>
+                <th>Attribute Name</th>
+            </tr>
+            <% ServletContext context1 = request.getServletContext();
+               Enumeration enum1;
+               enum1 = context1.getAttributeNames();
+               while (enum1.hasMoreElements()) {
+            %>
+            <tr>
+                <td>
+                    <%= enum1.nextElement().toString()%>
+                </td>
+            </tr>
+            <% }%>
+        </table>
+
    </body>
 </html>
