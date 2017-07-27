@@ -23,14 +23,14 @@
             </tr>
             <% Collection<String> coll2;
                 coll2 = response.getHeaderNames();
-                for (String item:coll2) {
+                for (String name:coll2) {
             %>
             <tr>
                 <td>
-                    <%= item%>
+                    <%= name%>
                 </td>
                 <td>
-                    <%= response.getHeader(item)%>
+                    <%= response.getHeader(name)%>
                 </td>
             </tr>
             <% }%>
