@@ -18,8 +18,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author rhemmerling
  */
-@WebServlet(name = "RequestAttributes", urlPatterns = {"/RequestAttributes"})
-public class RequestAttributes extends HttpServlet {
+@WebServlet(name = "RequestAttributesB", urlPatterns = {"/RequestAttributesB"})
+public class RequestAttributesB extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,7 +35,7 @@ public class RequestAttributes extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         String myAttribute = "MyAttribute";
         request.setAttribute("MYATTRIBUTE",myAttribute);
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("request_attributes.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("FrontController");
         requestDispatcher.forward(request, response);
     }
 
