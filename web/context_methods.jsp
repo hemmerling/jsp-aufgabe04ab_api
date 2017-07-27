@@ -9,10 +9,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Context Methods</title>
+        <title>Some other Context Methods</title>
     </head>
     <body>
        <jsp:include page = "header.jsp"/>
-       <h1>Context Methods</h1>
+       <h1>Some other Context Methods</h1>
    </body>
 </html>

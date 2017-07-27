@@ -9,10 +9,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Response Methods</title>
+        <title>Some other Response Methods</title>
     </head>
     <body>
        <jsp:include page = "header.jsp"/>
-       <h1>Response Methods</h1>
+       <h1>Some other Response Methods</h1>
    </body>
 </html>

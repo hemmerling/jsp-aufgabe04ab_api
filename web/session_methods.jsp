@@ -4,15 +4,16 @@
     Author     : rhemmerling
 --%>
 
+<%@page import="java.util.Enumeration"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Session Methods</title>
+        <title>Some other Session Methods</title>
     </head>
     <body>
        <jsp:include page = "header.jsp"/>
-       <h1>Session Methods</h1>
-   </body>
+       <h1>Some other Session Methods</h1>
+    </body>
 </html>

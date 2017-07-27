@@ -11,30 +11,29 @@
 <a href="request_methods.jsp">Request Methods</a> !
 
 <a href="response_headers.jsp">Response Headers</a> !
-<a href="response_methods.jsp">Response Methods ??</a> !
+<a href="response_methods.jsp">Some other Response Methods</a> !
 
 <a href="session_attributes.jsp?myAction=myRequestParameter">Session Attributes</a> !
-<a href="session_methods.jsp">Session Methods ??</a> !
+<a href="session_methods.jsp">Some other Session Methods</a> !
 
 <a href="context_parameters.jsp">Context Parameters</a> !
 <a href="context_attributes.jsp">Context Attributes</a> !
-<a href="context_methods.jsp">Context Methods ??</a><br><br>
+<a href="context_methods.jsp">Some other Context Methods</a><br><br>
 
 
 <a href="FrontController?todo=RequestParameters&myAction=myRequestParameter&myAction=myRequestParameter2">Request Parameters</a> !
 <a href="FrontController?todo=RequestHeaders">Request Headers</a> !
 <a href="RequestAttributesB?todo=RequestAttributes">Request Attributes</a> !
-<a href="FrontController?todo=RequestMethods">Request Methods</a> !
+<a href="FrontController?todo=RequestMethods">Some other Request Methods</a> !
 
 <a href="FrontController?todo=ResponseHeaders">Response Headers</a> !
-<a href="FrontController?todo=ResponseMethods">Response Methods ??</a> !
+<a href="FrontController?todo=ResponseMethods">Some other Response Methods</a> !
 
 <a href="FrontController?todo=Session Attributes&myAction=myRequestParameter">Session Attributes</a> !
-<a href="FrontController?todo=SessionMethods">Session Methods ??</a> !
+<a href="FrontController?todo=SessionMethods">Some other Session Methods</a> !
 
 <a href="FrontController?todo=ContextParameters">Context Parameters</a> !
 <a href="FrontController?todo=ContextAttributes">Context Attributes</a> !
-<a href="FrontController?todo=Context Methods">Context Methods ??</a><br>
+<a href="FrontController?todo=Context Methods">Some other Context Methods</a><br>
 
-   
 
