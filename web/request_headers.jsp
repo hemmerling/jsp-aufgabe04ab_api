@@ -26,14 +26,14 @@
             %>
             <tr>
                 <td>
-                    <%= name %>
+                    <%= name%>
                 </td>
                 <td>
-                    <%= request.getHeader(name) %>
+                    <%= request.getHeader(name)%>
                 </td>
             </tr>
             <% }%>
-         </table>
+        </table>
 
         <h1>Request Header Names</h1>
         <table style="width:100%" border="1">

@@ -12,7 +12,16 @@
         <title>Request Methods</title>
     </head>
     <body>
-       <jsp:include page = "header.jsp"/>
-       <h1>Request Methods</h1>
-   </body>
+        <jsp:include page = "header.jsp"/>
+        <h1>Request Method Names</h1>
+        <table style="width:100%" border="1">
+            <tr>
+                <th>Method Name</th>
+            </tr>
+            <td>
+                <%=request.getMethod() %>
+            </td>
+        </tr>
+    </table>
+</body>
 </html>
