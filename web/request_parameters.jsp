@@ -56,7 +56,6 @@
                     <%= name%>
                 </td>
                 <td>
-                    <% //= request.getParameter(name)%>
                     <%= Arrays.toString(request.getParameterValues(name))%>
                 </td>
             </tr>
