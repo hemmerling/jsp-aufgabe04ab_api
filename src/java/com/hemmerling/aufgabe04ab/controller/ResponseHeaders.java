@@ -6,6 +6,11 @@
 package com.hemmerling.aufgabe04ab.controller;
 
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.util.TimeZone;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,8 +22,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author rhemmerling
  */
-@WebServlet(name = "RequestAttributesA", urlPatterns = {"/RequestAttributesA"})
-public class RequestAttributesA extends HttpServlet {
+@WebServlet(name = "ResponseHeaders", urlPatterns = {"/ResponseHeaders"})
+public class ResponseHeaders extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,9 +37,13 @@ public class RequestAttributesA extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String myAttribute = "MyAttribute";
-        request.setAttribute("MYATTRIBUTE",myAttribute);
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("request_attributes.jsp");
+        response.setContentType("text/html;charset=UTF-8");
+        SimpleDateFormat dateFormat = new SimpleDateFormat(
+        "EEE, dd MMM yyyy HH:mm:ss z", Locale.GERMANY);
+        dateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
+        Date date = new Date();
+        response.setHeader("Date", dateFormat.format(date));
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("response_methods.jsp");
         requestDispatcher.forward(request, response);
     }
 

@@ -20,9 +20,9 @@
                 <th>Attribute Name</th>
                 <th>Attribute Contents</th>
             </tr>
-            <% ServletContext context2 = request.getServletContext();
+            <% //ServletContext context2 = request.getServletContext();           
                Enumeration enum2;
-               enum2 = context2.getAttributeNames();
+               enum2 = application.getAttributeNames();
                while (enum2.hasMoreElements()) {
                     String name = enum2.nextElement().toString();
             %>
@@ -31,7 +31,7 @@
                     <%= name %>
                 </td>
                 <td>
-                    <%= context2.getAttribute(name) %>
+                    <%= application.getAttribute(name) %>
                 </td>
             </tr>
             <% }%>
@@ -42,9 +42,9 @@
             <tr>
                 <th>Attribute Name</th>
             </tr>
-            <% ServletContext context1 = request.getServletContext();
+            <% // ServletContext context1 = request.getServletContext();
                Enumeration enum1;
-               enum1 = context1.getAttributeNames();
+               enum1 = application.getAttributeNames();
                while (enum1.hasMoreElements()) {
             %>
             <tr>

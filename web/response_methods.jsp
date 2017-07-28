@@ -14,5 +14,8 @@
     <body>
        <jsp:include page = "header.jsp"/>
        <h1>Some other Response Methods</h1>
-   </body>
+       <ul>
+          <li>response.getHeader("Date"): <%= response.getHeader("Date") %></li>
+       </ul>
+     </body>
 </html>

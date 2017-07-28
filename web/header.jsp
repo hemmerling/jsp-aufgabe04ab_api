@@ -8,10 +8,13 @@
 <a href="request_parameters.jsp?myAction=myRequestParameter&myAction=myRequestParameter2">Request Parameters</a> !
 <a href="request_headers.jsp">Request Headers</a> !
 <a href="RequestAttributesA">Request Attributes</a> !
-<s><a href="request_methods.jsp">Some other Request Methods</a></s> !
+<a href="request_parts.jsp">Request Parts</a> !
+<a href="request_methods.jsp">Some other Request Methods</a> !
+<s><a href="RequestHeaders">Some other Request Methods forwarded by a Servlet</a></s> !
 
 <a href="response_headers.jsp">Response Headers</a> !
-<s><a href="response_methods.jsp">Some other Response Methods</a></s> !
+<a href="response_methods.jsp">Some other Response Methods</a> !
+<s><a href="ResponseHeaders">Some other Response Methods forwarded by a Servlet</a></s> !
 
 <a href="session_attributes.jsp?myAction=myRequestParameter">Session Attributes</a> !
 <s><a href="session_methods.jsp">Some other Session Methods</a></s> !
