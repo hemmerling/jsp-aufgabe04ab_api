@@ -63,7 +63,7 @@
            <li>response.getContentType(): <%= response.getContentType() %></li>
            <li>response.setContentType("text/css"): <% response.setContentType("text/css"); %> - "The method print(boolean) in the type JspWriter is not applicable for the arguments (void)"</li>
            <li>response.getContentType(): <%= response.getContentType() %></li>
-           <li>response.: <%= response %></li>
+           <li>response.setDateHeader("Date", new Date().getTime()): <% response.setDateHeader("Date", new Date().getTime()); %> - "The method print(boolean) in the type JspWriter is not applicable for the arguments (void)"</li>
            <li>response.: <%= response %></li>
            <li>response.: <%= response %></li>
            <li>response.: <%= response %></li>
