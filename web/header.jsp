@@ -9,8 +9,7 @@
 <a href="request_headers.jsp">Request Headers</a> !
 <a href="RequestAttributesA">Request Attributes</a> !
 <a href="request_parts.jsp">Request Parts</a> !
-<a href="request_methods.jsp">Some other Request Methods</a> !
-<s><a href="RequestHeaders">Some other Request Methods forwarded by a Servlet</a></s> !
+<a href="RequestMethods">Some other Request Methods</a> !
 
 <a href="response_headers.jsp">Response Headers</a> !
 <a href="response_methods.jsp">Some other Response Methods</a> !

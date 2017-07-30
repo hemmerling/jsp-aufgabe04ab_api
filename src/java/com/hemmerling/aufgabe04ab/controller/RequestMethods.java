@@ -20,8 +20,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author rhemmerling
  */
-@WebServlet(name = "RequestHeaders", urlPatterns = {"/RequestHeaders"})
-public class RequestHeaders extends HttpServlet {
+@WebServlet(name = "RequestMethods", urlPatterns = {"/RequestMethods"})
+public class RequestMethods extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,9 +35,10 @@ public class RequestHeaders extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        String myAttribute = "MyAttribute";
+        request.setAttribute("MYATTRIBUTE",myAttribute);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("request_methods.jsp");
         requestDispatcher.forward(request, response);
-
     }
 
 // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
