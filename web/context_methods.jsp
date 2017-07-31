@@ -64,6 +64,12 @@
             <li>application.getRequestDispatcher("/RequestAttributesA"): <%= application.getRequestDispatcher("/RequestAttributesA").getClass().getName() %> - "<i>java.lang.IllegalArgumentException: Path RequestAttributesA does not start with a "/" character</i>"</li>
             <li>application.getResource("index.jsp"): <%= application.getResource("index.jsp") %></li>
             <li>application.getResourceAsStream("index.jsp"): <%= application.getResourceAsStream("index.jsp").getClass().getName() %></li>
+            <li>application.getResourcePaths("/"): <%= application.getResourcePaths("/") %> - "java.lang.IllegalArgumentException: Path index.jsp does not start with a '/' character"</li>
+            <li>application.getServletRegistration("FrontController"): <%= application.getServletRegistration("FrontController") %></li>
+            <li>application.getServletRegistrations(): <%= application.getServletRegistrations() %></li>
+            <li>application.: <%= application %></li>
+            <li>application.: <%= application %></li>
+            <li>application.: <%= application %></li>
             <li>application.: <%= application %></li>
             <li>application.: <%= application %></li>
             <li>application.: <%= application %></li>
