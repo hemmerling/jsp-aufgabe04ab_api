@@ -26,7 +26,7 @@ import javax.servlet.http.HttpSession;
  * @author rhemmerling
  */
 @WebServlet(name = "FrontController", urlPatterns = {"/FrontController"})
-public class FrontController extends HttpServlet {
+public class FrontControllerClass extends HttpServlet {
 
     private static final String ACTION = "todo";
 
