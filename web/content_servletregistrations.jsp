@@ -10,18 +10,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Context FilterRegistrations</title>
+        <title>Context ServletRegistrations</title>
     </head>
     <body>
         <jsp:include page = "header.jsp"/>
-        <h1>Context FilterRegistrations</h1>
+        <h1>Context ServletRegistrations</h1>
         <table style="width:100%" border="1">
             <tr>
-                <th>FilterRegistration Name</th>
-                <th>FilterRegistration Value</th>
+                <th>ServletRegistration Name</th>
+                <th>ServletRegistration Value</th>
             </tr>
-            <% Map<String, ? extends FilterRegistration> map;
-                map = (Map<String, ? extends FilterRegistration>) application.getFilterRegistrations();
+            <% Map<String, ? extends ServletRegistration> map;
+                map = (Map<String, ? extends ServletRegistration>) application.getServletRegistrations();
                 for (Map.Entry m : map.entrySet()) {
             %>
             <tr>
@@ -29,7 +29,7 @@
                     <%= m.getKey()%>
                 </td>
                 <td>
-                    <%=  ((FilterRegistration) m.getValue()).getClassName() %>
+                    <%=  ((ServletRegistration) m.getValue()).getClassName() %>
                 </td>
             </tr>
             <% }%>

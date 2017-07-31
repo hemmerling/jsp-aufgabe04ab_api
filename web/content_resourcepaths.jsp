@@ -4,34 +4,32 @@
     Author     : rhemmerling
 --%>
 
+<%@page import="java.util.Set"%>
 <%@page import="java.util.Map"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Context FilterRegistrations</title>
+        <title>Context ResourcePaths for ( "/" )</title>
     </head>
     <body>
         <jsp:include page = "header.jsp"/>
-        <h1>Context FilterRegistrations</h1>
+        <h1>Context ResourcePaths for ( "/" )</h1>
+        <p>"java.lang.IllegalArgumentException: Path index.jsp does not start with a '/' character"</p>
         <table style="width:100%" border="1">
             <tr>
-                <th>FilterRegistration Name</th>
-                <th>FilterRegistration Value</th>
+                <th>ServletRegistration Value</th>
             </tr>
-            <% Map<String, ? extends FilterRegistration> map;
-                map = (Map<String, ? extends FilterRegistration>) application.getFilterRegistrations();
-                for (Map.Entry m : map.entrySet()) {
+            <% Set<String> set;
+               set = (Set<String>) application.getResourcePaths("/");
+               for (String s : set) {
             %>
             <tr>
                 <td>
-                    <%= m.getKey()%>
+                    <%= s%>
                 </td>
-                <td>
-                    <%=  ((FilterRegistration) m.getValue()).getClassName() %>
-                </td>
-            </tr>
+             </tr>
             <% }%>
         </table>
     </body>

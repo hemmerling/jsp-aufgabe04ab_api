@@ -6,6 +6,7 @@
 
 <%@page import="java.util.Enumeration"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<% application.setAttribute("MYATTRIBUTE", new Object()); %>
 <!DOCTYPE html>
 <html>
     <head>

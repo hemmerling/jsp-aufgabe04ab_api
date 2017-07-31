@@ -64,14 +64,23 @@
             <li>application.getRequestDispatcher("/RequestAttributesA"): <%= application.getRequestDispatcher("/RequestAttributesA").getClass().getName() %> - "<i>java.lang.IllegalArgumentException: Path RequestAttributesA does not start with a "/" character</i>"</li>
             <li>application.getResource("index.jsp"): <%= application.getResource("index.jsp") %></li>
             <li>application.getResourceAsStream("index.jsp"): <%= application.getResourceAsStream("index.jsp").getClass().getName() %></li>
-            <li>application.getResourcePaths("/"): <%= application.getResourcePaths("/") %> - "java.lang.IllegalArgumentException: Path index.jsp does not start with a '/' character"</li>
-            <li>application.getServletRegistration("FrontController"): <%= application.getServletRegistration("FrontController") %></li>
-            <li>application.getServletRegistrations(): <%= application.getServletRegistrations() %></li>
-            <li>application.: <%= application %></li>
-            <li>application.: <%= application %></li>
-            <li>application.: <%= application %></li>
-            <li>application.: <%= application %></li>
-            <li>application.: <%= application %></li>
+            <li>application.getServletRegistration("FrontController"): <%= application.getServletRegistration("FrontController").getClassName() %></li>
+            <li>application.getSessionCookieConfig(): <%= application.getSessionCookieConfig() %></li>
+            <li>application.hashCode(): <%= application.hashCode() %></li>
+            <li>application.log("My Logfile Message": <% application.log("My Logfile Message"); %> - "The method print(boolean) in the type JspWriter is not applicable for the arguments (void)"</li></li>
+            <li>application.notify(): <% // application.notify(); %> We don't call the request here in this JSP demo - "The method print(boolean) in the type JspWriter is not applicable for the arguments (void)"</li>
+            <li>application.notifyAll(): <% // application.notifyAll() %> We don't call the request here in this JSP demo - "The method print(boolean) in the type JspWriter is not applicable for the arguments (void)"</li>
+            <li>application.setAttribute("MYATTRIBUTE", new Object()): <% application.setAttribute("MYATTRIBUTE", new Object()); %> - "The method print(boolean) in the type JspWriter is not applicable for the arguments (void)"</li>
+            <li>application.getAttribute("MYATTRIBUTE"): <%= application.getAttribute("MYATTRIBUTE") %></li>
+            <li>application.removeAttribute("MYATTRIBUTE"): <% application.removeAttribute("MYATTRIBUTE"); %> - "The method print(boolean) in the type JspWriter is not applicable for the arguments (void)"</li>
+            <li>application.getAttribute("MYATTRIBUTE"): <%= application.getAttribute("MYATTRIBUTE") %></li>
+            <li>application.setInitParameter("MYCONTEXT_INITALISATION_PARAMETER", "MYCONTEXT_INITALISATION_VALUE"): 
+                <% try {
+                        application.setInitParameter("MYCONTEXT_INITALISATION_PARAMETER", "MYCONTEXT_INITALISATION_VALUE");
+                    } catch (IllegalStateException e) {
+                        out.println("<I>java.lang.IllegalStateException: Initialization parameters can not be set after the context has been initialized</I>");
+                    } %>  - "The method print(boolean) in the type JspWriter is not applicable for the arguments (void)"</li>
+            <li>application.getInitParameter("MYCONTEXT_INITALISATION_PARAMETER"): <%= application.getInitParameter("MYCONTEXT_INITALISATION_PARAMETER") %></li>
             <li>application.: <%= application %></li>
             <li>application.: <%= application %></li>
          </ul>
