@@ -20,7 +20,7 @@
 
 <a href="context_parameters.jsp">Context Parameters</a> !
 <a href="context_attributes.jsp">Context Attributes</a> !
-<s><a href="context_methods.jsp">Some other Context Methods</a></s><br><br>
+<a href="context_methods.jsp">Some other Context Methods</a><br><br>
 
 <a href="FrontController?todo=RequestParameters&myAction=myRequestParameter&myAction=myRequestParameter2">Request Parameters</a> !
 <a href="FrontController?todo=RequestHeaders">Request Headers</a> !
