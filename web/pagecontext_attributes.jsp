@@ -6,16 +6,17 @@
 
 <%@page import="java.util.Enumeration"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<% pageContext.setAttribute("MY_PAGECONTEXT_ATTRIBUTE", "MyPageContextAttribute", PageContext.PAGE_SCOPE); //1 %>
+<% pageContext.setAttribute("MY_PAGECONTEXT_ATTRIBUTE1A", "MyPageContextAttribute1A"); //1 %>
+<% pageContext.setAttribute("MY_PAGECONTEXT_ATTRIBUTE1B", "MyPageContextAttribute1B", PageContext.PAGE_SCOPE); //1 %>
 
-<% request.setAttribute("MY_REQUEST_ATTRIBUTE", "MyRequestAttribute"); // 2 %>
-<% pageContext.setAttribute("MY_REQUEST_ATTRIBUTE2", "MyRequestAttribute2", PageContext.REQUEST_SCOPE); //2 %>
+<% request.setAttribute("MY_REQUEST_ATTRIBUTE2B", "MyRequestAttribute2A"); // 2 %>
+<% pageContext.setAttribute("MY_REQUEST_ATTRIBUTE2B", "MyRequestAttribute2B", PageContext.REQUEST_SCOPE); //2 %>
 
-<% session.setAttribute("MY_SESSION_ATTRIBUTE", "MySessionAttribute"); %>
-<% pageContext.setAttribute("MY_SESSION_ATTRIBUTE2", "MySessionAttribute2", PageContext.SESSION_SCOPE); //3 %>
+<% session.setAttribute("MY_SESSION_ATTRIBUTE3A", "MySessionAttribute3A"); %>
+<% pageContext.setAttribute("MY_SESSION_ATTRIBUTE3B", "MySessionAttribute3B", PageContext.SESSION_SCOPE); //3 %>
 
-<% application.setAttribute("MY_REQUESTCONTEXT_ATTRIBUTE", "ApplicationAttribute"); %>
-<% pageContext.setAttribute("MY_APPLICATION_ATTRIBUTE2", "MyApplicationAttribute2", PageContext.APPLICATION_SCOPE); //4 %>
+<% application.setAttribute("MY_APPLICATION_ATTRIBUTE4A", "ApplicationAttribute4A"); %>
+<% pageContext.setAttribute("MY_APPLICATION_ATTRIBUTE4B", "MyApplicationAttribute4A", PageContext.APPLICATION_SCOPE); //4 %>
 <!DOCTYPE html>
 <html>
     <head>
