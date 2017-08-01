@@ -83,10 +83,12 @@
                 }%>  - "The method print(boolean) in the type JspWriter is not applicable for the arguments (void)"</li>
         <li>application.getInitParameter("MYCONTEXT_INITALISATION_PARAMETER"): <%= application.getInitParameter("MYCONTEXT_INITALISATION_PARAMETER")%></li>
         <li>application.setSessionTrackingModes(new HashSet<SessionTrackingMode>()):  <% // application.setSessionTrackingModes(new HashSet<SessionTrackingMode>()); %> We don't call the request here in this JSP demo - "The method print(boolean) in the type JspWriter is not applicable for the arguments (void)"</li>
-        <li>application.wait():
+        <li>application.wait(); application.wait(1); application.wait(1,1):
             <% if (false) {
                     try {
                         application.wait();
+                        application.wait(1);
+                        application.wait(1,1);
                     } catch (InterruptedException e) {
                         out.println("<I>InterruptedException</I>");
                     }
