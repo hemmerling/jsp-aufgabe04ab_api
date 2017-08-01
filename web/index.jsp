@@ -9,10 +9,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Startseite [Web Components ( aufgabe01a_menu )]</title>
+        <title>Startseite [Web Components ( aufgabe04ab_api )]</title>
     </head>
     <body>
         <jsp:include page = "header.jsp"/>
-        <h1>Web Components ( aufgabe04ab_faq ) - Startseite</h1>
+        <h1>Web Components ( aufgabe04ab_api ) - Startseite</h1>
     </body>
 </html>
