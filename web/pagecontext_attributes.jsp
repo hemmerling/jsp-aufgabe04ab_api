@@ -21,11 +21,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>PageContents Attributes</title>
+        <title>PageContext Attributes</title>
     </head>
     <body>
        <jsp:include page = "header.jsp"/>
-       <h1>PageContents Attributes</h1>
+       <h1>PageContext Attributes</h1>
         <table style="width:100%" border="1">
             <tr>
                 <th>Attribute Name</th>
@@ -53,7 +53,7 @@
             <% }%>
          </table>
  
-        <h1>Context Attribute Names</h1>
+        <h1>PageContext Attribute Names</h1>
         <table style="width:100%" border="1">
             <tr>
                 <th>Attribute Name</th>
