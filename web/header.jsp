@@ -20,9 +20,9 @@
 
 <a href="context_parameters.jsp">Context Parameters</a> !
 <a href="context_attributes.jsp">Context Attributes</a> !
-<a href="content_filterregistrations.jsp">Context FilterRegistrations</a> !
-<a href="content_resourcepaths.jsp">Context ResourcePaths</a> !
-<a href="content_servletregistrations.jsp">Context ServletRegistrations</a> !
+<a href="context_filterregistrations.jsp">Context FilterRegistrations</a> !
+<a href="context_resourcepaths.jsp">Context ResourcePaths</a> !
+<a href="context_servletregistrations.jsp">Context ServletRegistrations</a> !
 <a href="context_methods.jsp">Some other Context Methods</a>
 
 <a href="pagecontext_attributes.jsp">PageContext Attributes</a> !
