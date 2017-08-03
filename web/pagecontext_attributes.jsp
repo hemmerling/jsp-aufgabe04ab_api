@@ -15,7 +15,7 @@
 <% session.setAttribute("MY_SESSION_ATTRIBUTE3A", "MySessionAttribute3A"); %>
 <% pageContext.setAttribute("MY_SESSION_ATTRIBUTE3B", "MySessionAttribute3B", PageContext.SESSION_SCOPE); //3 %>
 
-<% application.setAttribute("MY_APPLICATION_ATTRIBUTE4A", "ApplicationAttribute4A"); %>
+<% application.setAttribute("MY_APPLICATION_ATTRIBUTE4A", "MyApplicationAttribute4A"); %>
 <% pageContext.setAttribute("MY_APPLICATION_ATTRIBUTE4B", "MyApplicationAttribute4A", PageContext.APPLICATION_SCOPE); //4 %>
 <!DOCTYPE html>
 <html>
@@ -60,7 +60,7 @@
             </tr>
             <% // ServletContext context1 = request.getServletContext();
                Enumeration enum1;
-               enum1 = application.getAttributeNames();
+               enum1 = pageContext.getAttributeNamesInScope(PageContext.APPLICATION_SCOPE);
                while (enum1.hasMoreElements()) {
             %>
             <tr>
@@ -70,6 +70,26 @@
             </tr>
             <% }%>
         </table>
-
-   </body>
+        <%
+            pageContext.removeAttribute("MY_APPLICATION_ATTRIBUTE4A");
+            pageContext.removeAttribute("MY_APPLICATION_ATTRIBUTE4B", PageContext.APPLICATION_SCOPE);
+        %>
+        <h1>PageContext Attribute Names, with removed custom Attributes</h1>
+        <table style="width:100%" border="1">
+            <tr>
+                <th>Attribute Name</th>
+            </tr>
+            <% // ServletContext context1 = request.getServletContext();
+               Enumeration enum3;
+               enum3 = pageContext.getAttributeNamesInScope(PageContext.APPLICATION_SCOPE);
+               while (enum3.hasMoreElements()) {
+            %>
+            <tr>
+                <td>
+                    <%= enum3.nextElement().toString()%>
+                </td>
+            </tr>
+            <% }%>
+        </table>
+    </body>
 </html>
